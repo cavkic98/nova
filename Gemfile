@@ -69,6 +69,7 @@ gem 'activeadmin'
 
 # Plus integrations with:
 gem 'devise'
+gem 'twitter-bootstrap-rails'
 gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
