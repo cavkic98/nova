@@ -1,3 +1,4 @@
+
 <div class="containter"></div>
   <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-info" >
@@ -18,9 +19,7 @@
                             </div>
                             
                             <div style="margin-bottom: 25px" class="input-group">
-                               <% if @minimum_password_length %>
-                                  <em>(<%= @minimum_password_length %> characters minimum)</em>
-                                  <% end %><br/>
+                               
                                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                   <%= f.password_field :password, autocomplete: "off", id: "login-password", class: "form-control", placeholder: "password"%>
                             </div>
