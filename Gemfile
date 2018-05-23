@@ -74,3 +74,4 @@ gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
 gem 'devise-bootstrap-views'
+gem 'country_select'

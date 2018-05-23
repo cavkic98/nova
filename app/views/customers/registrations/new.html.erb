@@ -26,9 +26,9 @@
                               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                               <%= f.text_field :name, autofocus: true, autocomplete: "off", id: "login-username", class:"form-control", placeholder: "name" %>
                             </div>
-                            <div style="margin-bottom: 25px" class="input-group">
+                            <div style="margin-bottom: 25px;" class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                              <%= f.select(:country, options_for_select([['Bosna i Hercegovina', 'Bosna i Hercegovina'], ['Hrvatska', 'Hrvatska'], ['Srbija', 'Srbija']]), {}, { id: "login-username", class:"form-control"}) %>
+                              <%= f.country_select(:country, {selected: @customer.country}, {class: "form-control"}) %>
                             </div>
                             <div style="margin-bottom: 25px" class="input-group">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
