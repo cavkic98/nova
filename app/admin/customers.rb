@@ -1,8 +1,20 @@
 ActiveAdmin.register Customer do
  
+ permit_params :email, :password, :approve
+ 
+ 
+ 
  index do
+    selectable_column
+    id_column
+    column :email
+    column :last_sign_in_at
+    column :last_sign_in_ip
+    column :created_at
+    column :approved
+    actions
     
-    actions :defaults => false do |user|
+    actions :defaults => false do |customer|
       link_to 'Edit', edit_admin_customer_path(customer)
       link_to 'Delete', admin_customer_path(customer), :method => :delete, :confirm => "Are you sure"
       link_to 'View', admin_customer_path(customer)
