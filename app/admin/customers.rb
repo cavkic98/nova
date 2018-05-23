@@ -1,6 +1,6 @@
 ActiveAdmin.register Customer do
  
- permit_params :email, :password, :approve
+ permit_params :email, :password, :approve, :name, :last_name, :country, :city, :addres, :phone_number
  
  
  
@@ -8,6 +8,12 @@ ActiveAdmin.register Customer do
     selectable_column
     id_column
     column :email
+    column :name
+    column :last_name
+    column :country
+    column :city
+    column :addres
+    column :phone_number
     column :last_sign_in_at
     column :last_sign_in_ip
     column :created_at
@@ -25,7 +31,7 @@ ActiveAdmin.register Customer do
   end
   
   action_item :approve, only: :show do
-  link_to 'Approve',  approve_admin_customer_path(user), method: :put if !user.approved?
+  link_to 'Approve',  approve_admin_customer_path(customer), method: :put if !customer.approved?
   end
   
   member_action :approve, method: :put do
