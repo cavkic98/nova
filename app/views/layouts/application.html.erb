@@ -22,7 +22,7 @@
     <![endif]-->
   </head>
   <body>
-    <% if !devise_controller?%>
+    <% if controller_name != "sessions" && "registrations" %>
       <div class="navbar navbar-default navbar-static-top navigacija">
         <div class="container">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
