@@ -1,0 +1,42 @@
+<div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+          <%= link_to "Finance tracker", root_path, class: "navbar-brand"%>
+          <%if !user_signed_in? && !customer_signed_in?  %>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav col-md-6">
+                  <li><%= link_to "sign in ", new_user_session_path, class: 'link-to-text-color'%></li>
+                  <li><%= link_to "Register", new_user_registration_path, class: 'link-to-text-color'%></li>
+                </ul>
+              </div>
+          <%end%>
+          
+          <% if user_signed_in?%>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-right col-md-4">
+                    <li class="col-md-8 user-name text-right"><i class="fa fa-user"></i></li>
+                    <li class="col-md-4 logout"><%= link_to "Logout", destroy_user_session_path, class: "btn btn-excess btn-danger RegLog2", method: :delete %></li>
+                    <li class="col-md-4 logout"><%= link_to "My Profile", user_path(current_user), class: "btn btn-excess btn-danger RegLog2" %></li>
+                </ul> 
+              </div>
+          <%end%>
+          <%if customer_signed_in?%>
+               <div class="navbar-collapse collapse navbar-responsive-collapse">
+                 <ul class="nav navbar-right col-md-4">
+                    <li class="col-md-8 user-name text-right"><i class="fa fa-user"></i></li>
+                    <li class="col-md-4 logout"><%= link_to "Logout", destroy_customer_session_path, class: "btn btn-excess btn-danger RegLog2", method: :delete %></li>
+                    <li class="col-md-4 logout"><%= link_to "My Profile", customer_path(current_customer), class: "btn btn-excess btn-danger RegLog2"%></li>
+                 </ul>
+               </div>
+          <%end%>
+                
+           
+          
+      </div>
+</div>
+
+
