@@ -26,33 +26,46 @@
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
-				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-success btn-sm">Follow</button>
-					<button type="button" class="btn btn-danger btn-sm">Message</button>
-				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
 				<div class="profile-usermenu">
-					<ul class="nav">
-						<li class="active">
-							<a href="#">
-							<i class="glyphicon glyphicon-home"></i>
-							Overview </a>
+					<ul style="color:#4d4dff" class="nav">
+						<li style="padding-left: 5%" class="active">
+							
+							Name:
+							<%= @customer.name %><br>
 						</li>
-						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-user"></i>
-							Account Settings </a>
+						<li style="padding-left: 5%">
+							Last name: 
+							<%= @customer.last_name %> 
 						</li>
-						<li>
-							<a href="#" target="_blank">
-							<i class="glyphicon glyphicon-ok"></i>
-							Tasks </a>
+						<li style="padding-left: 5%">
+							Country: 
+							<%= @customer.country %> 
 						</li>
-						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-flag"></i>
-							Help </a>
+						<li style="padding-left: 5%">
+							City: 
+							<%= @customer.city %> 
+						</li>
+						<li style="padding-left: 5%">
+							Addres: 
+							<%= @customer.addres %> 
+						</li>
+						<li style="padding-left: 5%">
+							Phone number: 
+							<%= @customer.phone_number %> 
+						</li>
+						<li style="padding-left: 5%">
+							Second email: 
+							<%= @customer.second_email %> 
+						</li>
+						<li style="padding-left: 5%">
+							Fax: 
+							<%= @customer.fax %> 
+						</li>
+						<li style="padding-left: 5%">
+							Second phone number: 
+							<%= @customer.second_phone_number %> 
 						</li>
 					</ul>
 				</div>

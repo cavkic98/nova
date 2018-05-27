@@ -1,6 +1,6 @@
 ActiveAdmin.register Customer do
  
- permit_params :email, :password, :approve, :name, :last_name, :country, :city, :addres, :phone_number
+ permit_params :email, :password, :approve, :name, :last_name, :country, :city, :addres, :phone_number, :fax, :second_email, :second_phone_number
  
  
  
@@ -14,6 +14,9 @@ ActiveAdmin.register Customer do
     column :city
     column :addres
     column :phone_number
+    column :fax
+    column :second_email
+    column :second_phone_number
     column :last_sign_in_at
     column :last_sign_in_ip
     column :created_at
